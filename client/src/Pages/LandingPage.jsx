@@ -1,4 +1,6 @@
 import React from 'react';
+import instagram from '../Assets/svgs/instagram.svg';
+import tiktok from '../Assets/svgs/tiktok.svg';
 
 export const LandingPage = () => {
 	return (
@@ -30,6 +32,40 @@ export const LandingPage = () => {
 						alt="Pose d'ongles press-on"
 					/>
 				</div>
+			</div>
+
+			<div className="social-networks">
+				<h2 className="social-networks-title">
+					Retrouvez les dernières créations sur les réseaux sociaux
+				</h2>
+
+				<div className="wrapper-icon">
+					<a
+						href="https://instagram.com/_nail_enchantment_"
+						target="_blank"
+						rel="noreferrer"
+						title="Direction mon compte Instagram"
+					>
+						<img
+							src={instagram}
+							alt="Direction mon compte Instagram"
+						/>
+					</a>
+					<a
+						href="https://www.tiktok.com/@nail.enchantment6"
+						target="_blank"
+						rel="noreferrer"
+						title="Direction mon compte TikTok"
+					>
+						<img src={tiktok} alt="Direction mon compte TikTok" />
+					</a>
+				</div>
+				<p className="social-networks-text">
+					Un like, un abonnement, un partage, ça fait toujours plaisir
+					et ça permet de soutenir mon travail.
+					<br />
+					Merci à vous !
+				</p>
 			</div>
 		</main>
 	);

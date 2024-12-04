@@ -105,7 +105,7 @@ button:disabled:hover {
 /* ==================== Landing Page ==================== */
 .landing-page::before {
 	content: '';
-	background-image: url("../svgs/landing-page-shape-one.svg");
+	background-image: url('../svgs/landing-page-shape-one.svg');
 	background-repeat: no-repeat;
 	background-size: fill;
 	position: absolute;
@@ -117,14 +117,14 @@ button:disabled:hover {
 }
 .landing-page::after {
 	content: '';
-	background-image: url("../svgs/landing-page-shape-two.svg");
+	background-image: url('../svgs/landing-page-shape-two.svg');
 	background-repeat: no-repeat;
 	background-size: fill;
 	position: absolute;
 	left: 0;
-	bottom: 0;
+	top: 800px;
 	width: 31%;
-	height: 21%;
+	height: 90%;
 	z-index: -1;
 }
 
@@ -133,7 +133,6 @@ button:disabled:hover {
 	justify-content: space-between;
 	align-items: center;
 }
-
 
 .landing-page .block-1 {
 	flex: 1;
@@ -172,6 +171,78 @@ button:disabled:hover {
 	margin-left: 30px;
 }
 
+/*
+<div className="social-networks">
+	<h2 className="social-networks-title">
+		Retrouvez les dernières créations sur les réseaux sociaux
+	</h2>
+
+	<p className="social-networks-text">
+		Suivez l'actualité de Nail Enchantment et découvrez mes
+		réalisations sur Instagram et TikTok.
+	</p>
+
+	<div className="wrapper-icon">
+		<a
+			href="https://instagram.com/_nail_enchantment_"
+			target="_blank"
+			rel="noreferrer"
+			title="Direction mon compte Instagram"
+		>
+			<img
+				src={instagram}
+				alt="Direction mon compte Instagram"
+			/>
+		</a>
+	</div>
+	<div className="wrapper-icon">
+		<a
+			href="https://www.tiktok.com/@nail.enchantment6"
+			target="_blank"
+			rel="noreferrer"
+			title="Direction mon compte TikTok"
+		>
+			<img src={tiktok} alt="Direction mon compte TikTok" />
+		</a>
+	</div>
+</div>
+*/
+
+.landing-page .social-networks {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 180px;
+}
+
+.landing-page .social-networks-title {
+	font-size: 1.5rem;
+}
+
+.landing-page .social-networks-text {
+	margin: 20px 0;
+	font-size: 1.25rem;
+}
+
+.landing-page .social-networks .wrapper-icon {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.landing-page .wrapper-icon img {
+	width: 50px;
+	height: 50px;
+	margin: 0 10px;
+	transition: all 0.3s;
+	
+}
+.landing-page .wrapper-icon img:hover {
+	transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
 	.landing-page::before {
 		background-size: contain;
@@ -179,7 +250,7 @@ button:disabled:hover {
 	}
 	.landing-page::after {
 		background-size: contain;
-		height: 10%;
+		width: 40%;
 	}
 
 	.landing-page .hero-wrapper {
@@ -203,6 +274,26 @@ button:disabled:hover {
 		height: 43px;
 		font-size: 1.2rem;
 		line-height: calc(43px - 1.2rem);
+	}
+
+	.landing-page .social-networks {
+		text-align: center;
+		margin-top: 20px;
+		padding: 20px;
+	}
+
+	.landing-page .wrapper-icon img {
+		width: 40px;
+		height: 40px;
+		margin: 0 20px;
+	}
+
+	.landing-page .social-networks-title {
+		font-size: 1.25rem;
+	}
+
+	.landing-page .social-networks-text {
+		font-size: 1rem;
 	}
 }
 /* ==================== Landing Page ==================== */
